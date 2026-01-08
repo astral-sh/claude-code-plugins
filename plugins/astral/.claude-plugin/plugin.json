@@ -13,7 +13,10 @@
     "python",
     "astral",
     "uv",
+    "ruff",
     "package-manager",
+    "linter",
+    "formatter",
     "ty",
     "type-checker",
     "lsp"
