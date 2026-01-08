@@ -17,5 +17,5 @@ Add the local marketplace:
 Install the plugins:
 
 ```bash
-/plugin install uv@astral-sh
+/plugin install astral@astral-sh
 ```
