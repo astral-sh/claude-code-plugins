@@ -49,6 +49,8 @@ repository.
 
 ## Usage
 
+### Skills
+
 The plugin provides skills for Astral tools.
 
 Invoke skills with `/astral:<skill>`, e.g., `/astral:uv`.
@@ -56,8 +58,12 @@ Invoke skills with `/astral:<skill>`, e.g., `/astral:uv`.
 Claude sometimes needs to be prompted to use skills. We recommend adding this
 instruction to your `CLAUDE.md`:
 
-> When working with Python, invoke the `/astral:uv` skill to ensure best
-> practices are followed.
+> When working with Python, invoke the relevant `/astral:<skill>` for `uv`,
+> `ty`, and `ruff` to ensure best practices are followed.
+
+### LSP
+
+The plugin also provides the ty LSP. It requires `uvx` to be available.
 
 ## License
 
