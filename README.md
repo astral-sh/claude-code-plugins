@@ -49,7 +49,7 @@ repository.
 
 ## Usage
 
-The plugin provides skills for Astral tools. 
+The plugin provides skills for Astral tools.
 
 Invoke skills with `/astral:<skill>`, e.g., `/astral:uv`.
 

@@ -9,5 +9,23 @@
   "homepage": "https://astral.sh",
   "repository": "https://github.com/astral-sh/claude-code-plugins",
   "license": "MIT",
-  "keywords": ["python", "astral", "uv", "package-manager"]
+  "keywords": [
+    "python",
+    "astral",
+    "uv",
+    "package-manager",
+    "ty",
+    "type-checker",
+    "lsp"
+  ],
+  "lspServers": {
+    "ty": {
+      "command": "uvx",
+      "args": ["ty@latest", "server"],
+      "extensionToLanguage": {
+        ".py": "python",
+        ".pyi": "python"
+      }
+    }
+  }
 }
