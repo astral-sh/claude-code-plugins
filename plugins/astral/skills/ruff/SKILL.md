@@ -27,11 +27,11 @@ However, avoid making unnecessary changes:
 
 ## How to invoke ruff
 
-- **`uv run ruff ...`** (recommended) - Use when ruff is in the project's
-  dependencies to ensure you use the pinned version
-- **`uvx ruff ...`** - Use when ruff is not a project dependency, or for quick
+- `uv run ruff ...` - Use when ruff is in the project's dependencies to ensure
+  you use the pinned version
+- `uvx ruff ...` - Use when ruff is not a project dependency, or for quick
   one-off checks
-- **`ruff ...`** - Use if ruff is installed globally
+- `ruff ...` - Use if ruff is installed globally
 
 ## Commands
 

@@ -19,11 +19,11 @@ mypy, Pyright, and other type checkers.
 
 ## How to invoke ty
 
-- **`uv run ty ...`** (recommended) - Use when ty is in the project's
-  dependencies to ensure you use the pinned version
-- **`uvx ty ...`** - Use when ty is not a project dependency, or for quick
-  one-off checks
-- **`ty ...`** - Use if ty is installed globally
+- `uv run ty ...` - Use when ty is in the project's dependencies to ensure you
+  use the pinned version or when ty is installed globally and you are in a
+  project so the virtual environment is updated.
+- `uvx ty ...` - Use when ty is not a project dependency, or for quick one-off
+  checks
 
 ## Commands
 
@@ -117,13 +117,13 @@ explicitly requested by the user. Use `ty: ignore`, not `type: ignore`, and
 prefer rule-specific ignores:
 
 ```python
-# Prefer: rule-specific ignore
+# Good: rule-specific ignore
 x = undefined_var  # ty: ignore[possibly-unresolved-reference]
 
-# Avoid: blanket ignore
+# Bad: blanket ty ignore
 x = undefined_var  # ty: ignore
 
-# Don't use type: ignore
+# Bad: tool agnostic blanket ignore
 x = undefined_var  # type: ignore
 ```
 
