@@ -30,16 +30,16 @@ For team-wide plugin usage, add to your project's `.claude/settings.json`:
 
 ```json
 {
-  "extraKnownMarketplaces": [
-    {
-      "source": "github",
-      "repo": "astral-sh/claude-code-plugins"
+  "extraKnownMarketplaces": {
+    "astral-sh": {
+      "source": {
+        "source": "github",
+        "repo": "astral-sh/claude-code-plugins"
+      }
     }
-  ],
-  "plugins": {
-    "astral": {
-      "marketplace": "astral-sh"
-    }
+  },
+  "enabledPlugins": {
+    "astral@astral-sh": true
   }
 }
 ```
