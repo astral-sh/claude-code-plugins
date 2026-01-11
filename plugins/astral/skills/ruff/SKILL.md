@@ -3,6 +3,8 @@ name: ruff
 description:
   Guide for using ruff, the extremely fast Python linter and formatter. Use this
   when linting, formatting, or fixing Python code.
+metadata:
+  author: astral-sh
 ---
 
 # ruff
