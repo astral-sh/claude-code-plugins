@@ -11,7 +11,7 @@ git clone https://github.com/astral-sh/claude-code-plugins
 Add the local marketplace:
 
 ```bash
-/plugin marketplace add ./claude-code-plugins
+/plugin marketplace add ./.claude-plugin/marketplace.json
 ```
 
 Install the plugins:
