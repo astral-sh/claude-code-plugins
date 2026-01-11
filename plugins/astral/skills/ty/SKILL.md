@@ -6,6 +6,7 @@ description:
   Python projects.
 metadata:
   author: astral-sh
+  license: either of Apache-2.0 or MIT
 ---
 
 # ty

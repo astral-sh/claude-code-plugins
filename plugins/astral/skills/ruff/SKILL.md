@@ -5,6 +5,7 @@ description:
   when linting, formatting, or fixing Python code.
 metadata:
   author: astral-sh
+  license: either of Apache-2.0 or MIT
 ---
 
 # ruff

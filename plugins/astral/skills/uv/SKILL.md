@@ -5,6 +5,7 @@ description:
   working with Python projects, scripts, packages, or tools.
 metadata:
   author: astral-sh
+  license: either of Apache-2.0 or MIT
 ---
 
 # uv
