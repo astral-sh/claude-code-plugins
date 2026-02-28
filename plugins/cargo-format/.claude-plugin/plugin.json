@@ -1,0 +1,19 @@
+{
+  "name": "cargo-format",
+  "description": "Auto-format Rust files with cargo fmt after edits.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Astral",
+    "url": "https://astral.sh"
+  },
+  "repository": "https://github.com/astral-sh/claude-code-plugins",
+  "license": "MIT",
+  "keywords": ["rust", "cargo", "formatting"],
+  "hooks": [
+    {
+      "type": "PostToolUse",
+      "command": "python",
+      "args": [".claude-plugin/hooks/post-edit-format.py"]
+    }
+  ]
+}

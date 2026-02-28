@@ -1,0 +1,15 @@
+{
+  "name": "prettier-format",
+  "description": "Auto-format files with prettier after edits.",
+  "version": "0.1.0",
+  "repository": "https://github.com/astral-sh/claude-code-plugins",
+  "license": "MIT",
+  "keywords": ["prettier", "formatting", "json", "yaml", "markdown"],
+  "hooks": [
+    {
+      "type": "PostToolUse",
+      "command": "python",
+      "args": [".claude-plugin/hooks/post-edit-format.py"]
+    }
+  ]
+}

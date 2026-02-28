@@ -9,6 +9,21 @@
       "name": "astral",
       "source": "./plugins/astral",
       "description": "Skills for working with Python using Astral tools."
+    },
+    {
+      "name": "ruff-format",
+      "source": "./plugins/ruff-format",
+      "description": "Auto-format Python files with ruff after edits."
+    },
+    {
+      "name": "cargo-format",
+      "source": "./plugins/cargo-format",
+      "description": "Auto-format Rust files with cargo fmt after edits."
+    },
+    {
+      "name": "prettier-format",
+      "source": "./plugins/prettier-format",
+      "description": "Auto-format files with prettier after edits."
     }
   ]
 }
