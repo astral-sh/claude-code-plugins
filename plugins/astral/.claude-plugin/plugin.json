@@ -1,7 +1,7 @@
 {
   "name": "astral",
   "description": "Skills for working with Python using Astral tools.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Astral",
     "url": "https://astral.sh"
