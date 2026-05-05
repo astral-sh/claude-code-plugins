@@ -23,12 +23,15 @@
   ],
   "lspServers": {
     "ty": {
-      "command": "uvx",
-      "args": ["ty@latest", "server"],
+      "command": "uv",
+      "args": ["run", "ty", "server"],
       "extensionToLanguage": {
         ".py": "python",
-        ".pyi": "python"
-      }
+        ".pyi": "python",
+        ".pyw": "python"
+      },
+      "restartOnCrash": true,
+      "maxRestarts": 3
     }
   }
 }
