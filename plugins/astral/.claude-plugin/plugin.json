@@ -24,7 +24,7 @@
   "lspServers": {
     "ty": {
       "command": "uvx",
-      "args": ["ty@latest", "server"],
+      "args": ["ty==0.0.55", "server"],
       "extensionToLanguage": {
         ".py": "python",
         ".pyi": "python"
