@@ -1,5 +1,6 @@
 {
   "name": "astral-sh",
+  "description": "Claude Code plugins for Astral's Python development tools.",
   "owner": {
     "name": "Astral",
     "url": "https://astral.sh"
@@ -8,7 +9,12 @@
     {
       "name": "astral",
       "source": "./plugins/astral",
-      "description": "Skills for working with Python using Astral tools."
+      "description": "Skills for working with Python using Astral tools (uv, ruff, ty)."
+    },
+    {
+      "name": "ty-lsp",
+      "source": "./plugins/ty-lsp",
+      "description": "ty type checker language server for Python files."
     }
   ]
 }

@@ -18,4 +18,5 @@ Install the plugins:
 
 ```bash
 /plugin install astral@astral-sh
+/plugin install ty-lsp@astral-sh
 ```
