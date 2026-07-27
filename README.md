@@ -10,12 +10,16 @@ Add the Astral marketplace to Claude Code:
 /plugin marketplace add astral-sh/claude-code-plugins
 ```
 
-### Install the `astral` plugin
+### Install the plugins
 
 After adding the marketplace:
 
 ```bash
+# Skills for uv, ruff, and ty
 /plugin install astral@astral-sh
+
+# Optional ty language server
+/plugin install ty-lsp@astral-sh
 ```
 
 Or browse and install interactively:
@@ -39,19 +43,32 @@ For team-wide plugin usage, add to your project's `.claude/settings.json`:
     }
   },
   "enabledPlugins": {
-    "astral@astral-sh": true
+    "astral@astral-sh": true,
+    "ty-lsp@astral-sh": true
   }
 }
 ```
 
 Team members will be prompted to install the plugin when they trust the
-repository.
+repository. Omit `ty-lsp@astral-sh` when the project uses a different language
+server.
+
+### Migrating from the combined plugin
+
+The `astral` plugin now contains only the uv, ruff, and ty skills. To keep the
+ty language server after updating the marketplace, install the separate plugin:
+
+```bash
+/plugin install ty-lsp@astral-sh
+```
+
+If you use another Python language server, no replacement is needed.
 
 ## Usage
 
 ### Skills
 
-The plugin provides skills for Astral tools.
+The `astral` plugin provides skills for Astral tools.
 
 Invoke skills with `/astral:<skill>`, e.g., `/astral:uv`.
 
@@ -63,7 +80,8 @@ instruction to your `CLAUDE.md`:
 
 ### LSP
 
-The plugin also provides the ty LSP. It requires `uvx` to be available.
+The optional `ty-lsp` plugin provides the ty LSP for Python files (`.py` and
+`.pyi`). It requires `uvx` to be available.
 
 ## License
 

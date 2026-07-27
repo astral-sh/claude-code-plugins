@@ -1,0 +1,23 @@
+{
+  "name": "ty-lsp",
+  "description": "ty type checker language server for Python files.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Astral",
+    "url": "https://astral.sh"
+  },
+  "homepage": "https://astral.sh",
+  "repository": "https://github.com/astral-sh/claude-code-plugins",
+  "license": "MIT",
+  "keywords": ["python", "astral", "ty", "type-checker", "lsp"],
+  "lspServers": {
+    "ty": {
+      "command": "uvx",
+      "args": ["ty@latest", "server"],
+      "extensionToLanguage": {
+        ".py": "python",
+        ".pyi": "python"
+      }
+    }
+  }
+}
