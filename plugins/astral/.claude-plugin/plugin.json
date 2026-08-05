@@ -24,7 +24,7 @@
   "lspServers": {
     "ty": {
       "command": "uv",
-      "args": ["run", "ty", "server"],
+      "args": ["run", "--with", "ty", "ty", "server"],
       "extensionToLanguage": {
         ".py": "python",
         ".pyi": "python",
