@@ -63,7 +63,11 @@ instruction to your `CLAUDE.md`:
 
 ### LSP
 
-The plugin also provides the ty LSP. It requires `uvx` to be available.
+The plugin also provides the ty LSP. It requires `ty` to be installed in your project:
+
+```bash
+uv add --dev ty
+```
 
 ## License
 

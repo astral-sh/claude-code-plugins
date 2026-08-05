@@ -90,7 +90,7 @@ possibly-unresolved-reference = "warn"
 ## Language server
 
 This plugin automatically configures the ty language server for Python files
-(`.py` and `.pyi`).
+(`.py`, `.pyi`, and `.pyw`).
 
 ## Migrating from other tools
 
