@@ -99,7 +99,6 @@ This plugin automatically configures the ty language server for Python files
 
 ```bash
 mypy .                        → ty check
-mypy --strict .               → ty check --error-on-warning
 mypy path/to/file.py          → ty check path/to/file.py
 ```
 
