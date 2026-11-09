@@ -54,13 +54,15 @@ uv run -p 3.12 <command>  # Run with specific Python version
 
 ### Tools
 
-**Use when:** Running command-line tools (e.g., ruff, ty, pytest) without
-installation.
+Use `uv run` for tools declared in the project, such as `uv run pytest` or
+`uv run ruff check .`. This uses the project's locked tool versions and makes
+its dependencies available to the command. Use `uvx` for standalone tools that
+can run in an isolated environment.
 
 **Key commands:**
 
 ```bash
-uvx <tool> <args>            # Run a tool without installation
+uvx <tool> <args>            # Run a tool in an isolated environment
 uvx <tool>@<version> <args>  # Run a specific version of a tool
 ```
 
