@@ -101,10 +101,6 @@ mypy .                        → ty check
 mypy path/to/file.py          → ty check path/to/file.py
 ```
 
-`mypy --strict` enables several checks, including requiring annotations on
-function definitions. Review those requirements individually when migrating.
-`ty check --error-on-warning` controls the exit status for reported warnings.
-
 ### Pyright → ty
 
 ```bash
