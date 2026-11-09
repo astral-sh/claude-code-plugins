@@ -117,9 +117,11 @@ ruff format .
 
 ### Applying and reviewing unsafe fixes
 
-Ruff categorizes some auto-fixes as "unsafe" because they may change code
-behavior, not just style. For example, removing unused imports could break code
-that relies on side effects.
+Ruff's full diagnostic output can show a suggested change even when `--fix`
+would leave the code alone. Safe fixes can be applied with `--fix`. Unsafe fixes
+may change behavior and also require `--unsafe-fixes`. A suggestion marked for
+manual review, such as removing commented-out code for `ERA001`, requires a
+manual edit.
 
 ```bash
 ruff check --fix --unsafe-fixes --diff .  # Preview changes first
