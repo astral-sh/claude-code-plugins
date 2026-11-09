@@ -66,8 +66,7 @@ Ruff is configured in `pyproject.toml` or `ruff.toml`:
 ```toml
 # pyproject.toml
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP"]  # Enable specific rule sets
-ignore = ["E501"]               # Ignore specific rules
+extend-select = ["I", "UP"]  # Add import sorting and pyupgrade to the defaults
 
 [tool.ruff.lint.isort]
 known-first-party = ["myproject"]
