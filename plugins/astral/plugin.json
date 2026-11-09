@@ -8,7 +8,7 @@
     "url": "https://astral.sh"
   },
   "homepage": "https://astral.sh",
-  "repository": "https://github.com/astral-sh/claude-code-plugins",
+  "repository": "https://github.com/astral-sh/agent-plugins",
   "license": "MIT",
   "keywords": [
     "python",

@@ -11,7 +11,7 @@ projects with `uv`, linting and formatting with `ruff`, and type checking with
 In a Claude Code session, add the Astral marketplace.
 
 ```text
-/plugin marketplace add astral-sh/claude-code-plugins
+/plugin marketplace add astral-sh/agent-plugins
 ```
 
 Then install the `astral` plugin, or browse the marketplace with `/plugin`.
@@ -29,7 +29,7 @@ For a team installation, add the marketplace and plugin to your project's
     "astral-sh": {
       "source": {
         "source": "github",
-        "repo": "astral-sh/claude-code-plugins"
+        "repo": "astral-sh/agent-plugins"
       }
     }
   },
@@ -47,7 +47,7 @@ repository.
 Run these commands in your shell to add the marketplace and install the plugin.
 
 ```bash
-codex plugin marketplace add astral-sh/claude-code-plugins
+codex plugin marketplace add astral-sh/agent-plugins
 codex plugin add astral@astral-sh
 ```
 

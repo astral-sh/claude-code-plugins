@@ -8,7 +8,7 @@ Claude Code and Codex load the same skills. To add or update a skill, edit its
 Clone the repository.
 
 ```bash
-git clone https://github.com/astral-sh/claude-code-plugins
+git clone https://github.com/astral-sh/agent-plugins
 ```
 
 From the directory containing the clone, add it as a local marketplace and
@@ -19,7 +19,7 @@ install the plugin.
 Run each command in a Claude Code session.
 
 ```text
-/plugin marketplace add ./claude-code-plugins
+/plugin marketplace add ./agent-plugins
 ```
 
 ```text
@@ -31,7 +31,7 @@ Run each command in a Claude Code session.
 Run these commands in your shell.
 
 ```bash
-codex plugin marketplace add ./claude-code-plugins
+codex plugin marketplace add ./agent-plugins
 codex plugin add astral@astral-sh
 ```
 
