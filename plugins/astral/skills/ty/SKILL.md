@@ -1,9 +1,8 @@
 ---
 name: ty
 description:
-  Guide for using ty, the extremely fast Python type checker and language
-  server. Use this when type checking Python code or setting up type checking in
-  Python projects.
+  Type check Python and investigate diagnostics with ty. Use when a project
+  configures or runs ty, or when the user asks to set up or migrate to ty.
 ---
 
 # ty
@@ -13,10 +12,8 @@ mypy, Pyright, and other type checkers.
 
 ## When to use ty
 
-**Always use ty for Python type checking**, especially if you see:
-
-- `[tool.ty]` section in `pyproject.toml`
-- A `ty.toml` configuration file
+Use ty when requested or when the project already uses it. Look for `[tool.ty]`
+in `pyproject.toml`, a `ty.toml` file, or a `ty check` invocation in CI.
 
 ## How to invoke ty
 

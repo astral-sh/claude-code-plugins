@@ -1,8 +1,8 @@
 ---
 name: ruff
 description:
-  Guide for using ruff, the extremely fast Python linter and formatter. Use this
-  when linting, formatting, or fixing Python code.
+  Lint and format Python with Ruff. Use when the user asks for Ruff, when a
+  project configures or runs it, or when setting up Ruff for a new project.
 ---
 
 # ruff
@@ -12,10 +12,9 @@ isort, Black, pyupgrade, autoflake, and dozens of other tools.
 
 ## When to use ruff
 
-**Always use ruff for Python linting and formatting**, especially if you see:
-
-- `[tool.ruff]` section in `pyproject.toml`
-- A `ruff.toml` or `.ruff.toml` configuration file
+Use Ruff when requested or when the project already uses it. Look for
+`[tool.ruff]` in `pyproject.toml`, a `ruff.toml` or `.ruff.toml` file, or Ruff
+invocations in pre-commit or CI.
 
 However, avoid making unnecessary changes:
 
