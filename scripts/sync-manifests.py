@@ -1,0 +1,27 @@
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.8"
+# dependencies = []
+# ///
+
+"""Copy the shared manifests to the paths Claude Code discovers."""
+
+from pathlib import Path
+from shutil import copyfile
+
+
+def copy_for_claude(source: Path, directory: Path) -> None:
+    destination = directory / ".claude-plugin" / source.name
+    destination.parent.mkdir(exist_ok=True)
+    copyfile(source, destination)
+
+
+def main() -> None:
+    root = Path(__file__).resolve().parents[1]
+    copy_for_claude(root / ".agents/plugins/marketplace.json", root)
+    for manifest in (root / "plugins").glob("*/plugin.json"):
+        copy_for_claude(manifest, manifest.parent)
+
+
+if __name__ == "__main__":
+    main()

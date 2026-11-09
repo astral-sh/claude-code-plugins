@@ -1,0 +1,17 @@
+{
+  "name": "astral-sh",
+  "owner": {
+    "name": "Astral",
+    "url": "https://astral.sh"
+  },
+  "metadata": {
+    "description": "Astral plugins for coding agents."
+  },
+  "plugins": [
+    {
+      "name": "astral",
+      "source": "./plugins/astral",
+      "description": "Skills for working with Python using Astral tools."
+    }
+  ]
+}
