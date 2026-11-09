@@ -119,7 +119,7 @@ prefer rule-specific ignores:
 
 ```python
 # Good: rule-specific ignore
-x = undefined_var  # ty: ignore[possibly-unresolved-reference]
+x = undefined_var  # ty: ignore[unresolved-reference]
 
 # Bad: blanket ty ignore
 x = undefined_var  # ty: ignore
