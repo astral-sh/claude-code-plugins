@@ -45,5 +45,5 @@ copies so the plugin also installs in Git checkouts with symlinks disabled.
 After editing either manifest, regenerate the Claude Code copies.
 
 ```bash
-python3 scripts/sync-manifests.py
+uv run scripts/sync-manifests.py
 ```
