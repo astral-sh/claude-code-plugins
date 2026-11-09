@@ -90,8 +90,12 @@ possibly-unresolved-reference = "warn"
 
 ## Language server
 
-This plugin automatically configures the ty language server for Python files
-(`.py` and `.pyi`).
+This plugin registers `ty` for `.py` and `.pyi` files in Claude Code. With `uvx`
+on `PATH`, use Claude Code's `LSP` tool to find definitions and references. If
+the tool is unavailable, open the Errors tab in `/plugin` to check for startup
+errors.
+
+In Codex, use the `ty check` commands above for type diagnostics.
 
 ## Migrating from other tools
 
