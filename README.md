@@ -68,8 +68,13 @@ for Codex.
 
 ### Claude Code language server
 
-In Claude Code, the plugin also provides the `ty` language server. It requires
-`uvx` to be available.
+Claude Code uses `uvx` to start the `ty` language server. It provides type
+diagnostics and navigation, including go-to-definition and find-references.
+
+The Ruff language server provides lint diagnostics, quick fixes, import
+organization, and formatting. Editors can use both servers together. See the
+[ty language server features](https://docs.astral.sh/ty/features/language-server/)
+and [Ruff editor features](https://docs.astral.sh/ruff/editors/features/).
 
 ## License
 
