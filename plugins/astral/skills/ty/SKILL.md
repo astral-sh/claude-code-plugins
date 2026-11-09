@@ -98,9 +98,12 @@ This plugin automatically configures the ty language server for Python files
 
 ```bash
 mypy .                        → ty check
-mypy --strict .               → ty check --error-on-warning
 mypy path/to/file.py          → ty check path/to/file.py
 ```
+
+`mypy --strict` enables several checks, including requiring annotations on
+function definitions. Review those requirements individually when migrating.
+`ty check --error-on-warning` controls the exit status for reported warnings.
 
 ### Pyright → ty
 
