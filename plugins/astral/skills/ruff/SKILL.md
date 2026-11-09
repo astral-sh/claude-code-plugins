@@ -59,10 +59,10 @@ ruff format --check .         # Check if files are formatted (no changes)
 ruff format --diff .          # Show formatting diff without applying
 ```
 
-`uv format` runs the Ruff formatter. Use
-`uv format --check -- path/to/file.py` to check one file. By default,
-`uv format` selects a Ruff version independently of the project's lockfile. When
-the project pins Ruff, use `uv run ruff format` to match its formatter version.
+`uv format` runs the Ruff formatter. Use `uv format --check -- path/to/file.py`
+to check one file. By default, `uv format` selects a Ruff version independently
+of the project's lockfile. When the project pins Ruff, use `uv run ruff format`
+to match its formatter version.
 
 ## Configuration
 
