@@ -46,7 +46,8 @@ uv add --script script.py requests    # Add dependencies inline to the script
 uv init                   # Create new project
 uv add requests           # Add dependency
 uv remove requests        # Remove dependency
-uv sync                   # Install from lockfile
+uv sync                   # Sync the environment and update the lockfile if needed
+uv sync --locked          # Require an up-to-date lockfile
 uv run <command>          # Run commands in environment
 uv run python -c ""       # Run Python in project environment
 uv run -p 3.12 <command>  # Run with specific Python version
