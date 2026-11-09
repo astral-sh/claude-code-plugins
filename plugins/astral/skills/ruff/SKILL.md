@@ -19,12 +19,12 @@ isort, Black, pyupgrade, autoflake, and dozens of other tools.
 
 However, avoid making unnecessary changes:
 
-- **Don't format unformatted code** - If `ruff format --diff` shows changes
-  throughout an entire file, the project likely isn't using ruff for formatting.
-  Skip formatting to avoid obscuring actual changes.
-- **Scope fixes to code being edited** - Use `ruff check --diff` to see fixes
-  relevant to the code you're changing. Only apply fixes to files you're
-  modifying unless the user explicitly asks for broader fixes.
+- **Check the project's formatter** - Look at its configuration or CI. Use
+  `ruff format --diff path/to/file.py` to preview what would change.
+- **Scope fixes to the requested files** - Pass file paths when linting or
+  formatting a targeted edit. Add `--force-exclude` to honor project exclusions
+  for explicitly named files. A directory-wide `ruff format .` can also change
+  Python code blocks in Markdown files.
 
 ## How to invoke ruff
 
@@ -107,8 +107,8 @@ Run `ruff check --fix` before `ruff format`. Lint fixes can change code
 structure (e.g., reordering imports), which formatting then cleans up.
 
 ```bash
-ruff check --fix .
-ruff format .
+ruff check --fix --force-exclude path/to/file.py
+ruff format --force-exclude path/to/file.py
 ```
 
 ### Applying and reviewing unsafe fixes
