@@ -159,8 +159,10 @@ uv run python -c "..."
 python3.12 -c "..."
 
 # Good
-uvx python@3.12 -c "..."
+uv run --python 3.12 python -c "..."
 ```
+
+Use `uvx python@3.12` when you explicitly want a standalone interpreter.
 
 ### Don't manually manage environments in uv projects
 
