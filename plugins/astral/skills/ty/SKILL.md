@@ -25,6 +25,7 @@ mypy, Pyright, and other type checkers.
   project so the virtual environment is updated.
 - `uvx ty ...` - Use when ty is not a project dependency, or for quick one-off
   checks
+- `ty ...` - Use if ty is installed globally
 
 ## Commands
 
