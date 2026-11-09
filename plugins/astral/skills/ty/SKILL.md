@@ -41,7 +41,8 @@ ty check src/                 # Check specific directory
 ```bash
 ty check --error possibly-unresolved-reference   # Treat as error
 ty check --warn division-by-zero                 # Treat as warning
-ty check --ignore unresolved-import              # Disable rule
+ty check --ignore import-not-found               # Disable rule
+ty explain rule import-not-found                 # Explain the rule and its history
 ```
 
 ### Python version targeting
