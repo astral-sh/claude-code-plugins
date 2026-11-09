@@ -71,7 +71,6 @@ exclude = ["**/migrations/**"]
 
 [tool.ty.terminal]
 output-format = "full"
-error-on-warning = false
 ```
 
 ### Per-file overrides
