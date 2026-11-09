@@ -46,7 +46,8 @@ uv add --script script.py requests    # Add dependencies inline to the script
 uv init                   # Create new project
 uv add requests           # Add dependency
 uv remove requests        # Remove dependency
-uv sync                   # Install from lockfile
+uv sync                   # Sync the environment and update the lockfile if needed
+uv sync --locked          # Require an up-to-date lockfile
 uv run <command>          # Run commands in environment
 uv run python -c ""       # Run Python in project environment
 uv run -p 3.12 <command>  # Run with specific Python version
@@ -54,13 +55,15 @@ uv run -p 3.12 <command>  # Run with specific Python version
 
 ### Tools
 
-**Use when:** Running command-line tools (e.g., ruff, ty, pytest) without
-installation.
+Use `uv run` for tools declared in the project, such as `uv run pytest` or
+`uv run ruff check .`. This uses the project's locked tool versions and makes
+its dependencies available to the command. Use `uvx` for standalone tools that
+can run in an isolated environment.
 
 **Key commands:**
 
 ```bash
-uvx <tool> <args>            # Run a tool without installation
+uvx <tool> <args>            # Run a tool in an isolated environment
 uvx <tool>@<version> <args>  # Run a specific version of a tool
 ```
 
@@ -169,8 +172,10 @@ uv run python -c "..."
 python3.12 -c "..."
 
 # Good
-uvx python@3.12 -c "..."
+uv run --python 3.12 python -c "..."
 ```
+
+Use `uvx python@3.12` when you explicitly want a standalone interpreter.
 
 ### Don't manually manage environments in uv projects
 

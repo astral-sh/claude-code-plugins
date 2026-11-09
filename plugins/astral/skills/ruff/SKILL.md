@@ -59,6 +59,11 @@ ruff format --check .         # Check if files are formatted (no changes)
 ruff format --diff .          # Show formatting diff without applying
 ```
 
+`uv format` runs the Ruff formatter. Use `uv format --check -- path/to/file.py`
+to check one file. By default, `uv format` selects a Ruff version independently
+of the project's lockfile. When the project pins Ruff, use `uv run ruff format`
+to match its formatter version.
+
 ## Configuration
 
 Ruff is configured in `pyproject.toml` or `ruff.toml`:
@@ -66,8 +71,7 @@ Ruff is configured in `pyproject.toml` or `ruff.toml`:
 ```toml
 # pyproject.toml
 [tool.ruff.lint]
-select = ["E", "F", "I", "UP"]  # Enable specific rule sets
-ignore = ["E501"]               # Ignore specific rules
+extend-select = ["I", "UP"]  # Add import sorting and pyupgrade to the defaults
 
 [tool.ruff.lint.isort]
 known-first-party = ["myproject"]
@@ -113,9 +117,11 @@ ruff format .
 
 ### Applying and reviewing unsafe fixes
 
-Ruff categorizes some auto-fixes as "unsafe" because they may change code
-behavior, not just style. For example, removing unused imports could break code
-that relies on side effects.
+Ruff's full diagnostic output can show a suggested change even when `--fix`
+would leave the code alone. Safe fixes can be applied with `--fix`. Unsafe fixes
+may change behavior and also require `--unsafe-fixes`. A suggestion marked for
+manual review, such as removing commented-out code for `ERA001`, requires a
+manual edit.
 
 ```bash
 ruff check --fix --unsafe-fixes --diff .  # Preview changes first

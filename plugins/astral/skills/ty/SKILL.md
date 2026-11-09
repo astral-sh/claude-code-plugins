@@ -25,6 +25,7 @@ mypy, Pyright, and other type checkers.
   project so the virtual environment is updated.
 - `uvx ty ...` - Use when ty is not a project dependency, or for quick one-off
   checks
+- `ty ...` - Use if ty is installed globally
 
 ## Commands
 
@@ -45,7 +46,8 @@ with inline dependencies, use `uv check --script script.py`.
 ```bash
 ty check --error possibly-unresolved-reference   # Treat as error
 ty check --warn division-by-zero                 # Treat as warning
-ty check --ignore unresolved-import              # Disable rule
+ty check --ignore import-not-found               # Disable rule
+ty explain rule import-not-found                 # Explain the rule and its history
 ```
 
 ### Python version targeting
@@ -74,7 +76,6 @@ exclude = ["**/migrations/**"]
 
 [tool.ty.terminal]
 output-format = "full"
-error-on-warning = false
 ```
 
 ### Per-file overrides
@@ -102,7 +103,6 @@ This plugin automatically configures the ty language server for Python files
 
 ```bash
 mypy .                        → ty check
-mypy --strict .               → ty check --error-on-warning
 mypy path/to/file.py          → ty check path/to/file.py
 ```
 
@@ -123,7 +123,7 @@ prefer rule-specific ignores:
 
 ```python
 # Good: rule-specific ignore
-x = undefined_var  # ty: ignore[possibly-unresolved-reference]
+x = undefined_var  # ty: ignore[unresolved-reference]
 
 # Bad: blanket ty ignore
 x = undefined_var  # ty: ignore

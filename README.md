@@ -6,6 +6,18 @@ projects with `uv`, linting and formatting with `ruff`, and type checking with
 
 ## Installation
 
+### Codex
+
+Run these commands in your shell to add the marketplace and install the plugin.
+
+```bash
+codex plugin marketplace add astral-sh/agent-plugins
+codex plugin add astral@astral-sh
+```
+
+Teams can configure the marketplace and plugin in their
+[managed configuration](https://developers.openai.com/codex/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults).
+
 ### Claude Code
 
 In a Claude Code session, add the Astral marketplace.
@@ -41,18 +53,6 @@ For a team installation, add the marketplace and plugin to your project's
 
 Team members will be prompted to install the plugin when they trust the
 repository.
-
-### Codex
-
-Run these commands in your shell to add the marketplace and install the plugin.
-
-```bash
-codex plugin marketplace add astral-sh/agent-plugins
-codex plugin add astral@astral-sh
-```
-
-Teams can configure the marketplace and plugin in their
-[managed configuration](https://developers.openai.com/codex/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults).
 
 ## Usage
 
