@@ -36,6 +36,10 @@ ty check path/to/file.py      # Check specific file
 ty check src/                 # Check specific directory
 ```
 
+In a uv project, `uv check` (preview) runs `ty` with the project's environment.
+Use `ty check path/to/file.py` to select an individual project file. For a
+script with inline dependencies, use `uv check --script script.py`.
+
 ### Rule configuration
 
 ```bash

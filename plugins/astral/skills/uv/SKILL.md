@@ -70,6 +70,16 @@ uvx <tool>@<version> <args>  # Run a specific version of a tool
   well-known tools.
 - Only use `uv tool install` only when specifically requested by the user.
 
+### Type checking
+
+Use `uv check` (preview) to type check a uv project with `ty`. It syncs the
+project environment and uses the version of `ty` in `uv.lock` when `ty` is a
+project dependency or a member of the `dev` dependency group. Otherwise, uv
+selects a compatible version of `ty`.
+
+For a PEP 723 script, use `uv check --script script.py` to check it with its
+inline dependencies.
+
 ### Pip interface
 
 **Use when:** Legacy workflows with `requirements.txt` or manual environment
