@@ -1,4 +1,5 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "astral",
   "description": "Skills for working with Python using Astral tools.",
   "version": "0.1.0",
@@ -20,15 +21,5 @@
     "ty",
     "type-checker",
     "lsp"
-  ],
-  "lspServers": {
-    "ty": {
-      "command": "uvx",
-      "args": ["ty@latest", "server"],
-      "extensionToLanguage": {
-        ".py": "python",
-        ".pyi": "python"
-      }
-    }
-  }
+  ]
 }

@@ -4,6 +4,9 @@
     "name": "Astral",
     "url": "https://astral.sh"
   },
+  "metadata": {
+    "description": "Astral plugins for coding agents."
+  },
   "plugins": [
     {
       "name": "astral",

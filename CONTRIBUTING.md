@@ -11,9 +11,39 @@ Clone the repository.
 git clone https://github.com/astral-sh/claude-code-plugins
 ```
 
-Add the checkout as a local marketplace and install the plugin.
+From the directory containing the clone, add it as a local marketplace and
+install the plugin.
 
-| Step                      | Claude Code                                     | Codex CLI                                            |
-| ------------------------- | ----------------------------------------------- | ---------------------------------------------------- |
-| Add the local marketplace | `/plugin marketplace add ./claude-code-plugins` | `codex plugin marketplace add ./claude-code-plugins` |
-| Install the plugin        | `/plugin install astral@astral-sh`              | `codex plugin add astral@astral-sh`                  |
+### Claude Code
+
+Run each command in a Claude Code session.
+
+```text
+/plugin marketplace add ./claude-code-plugins
+```
+
+```text
+/plugin install astral@astral-sh
+```
+
+### Codex
+
+Run these commands in your shell.
+
+```bash
+codex plugin marketplace add ./claude-code-plugins
+codex plugin add astral@astral-sh
+```
+
+## Plugin manifests
+
+Edit the marketplace catalog in `.agents/plugins/marketplace.json` and each
+plugin's metadata in its root `plugin.json`. Codex reads these files directly.
+Claude Code looks for the same files under `.claude-plugin/`. We ship regular
+copies so the plugin also installs in Git checkouts with symlinks disabled.
+
+After editing either manifest, regenerate the Claude Code copies.
+
+```bash
+python3 scripts/sync-manifests.py
+```

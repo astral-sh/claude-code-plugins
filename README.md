@@ -6,19 +6,21 @@ projects with `uv`, linting and formatting with `ruff`, and type checking with
 
 ## Installation
 
-Add the `astral-sh` marketplace, then install the `astral` plugin. Run the
-Claude Code commands in a session and the Codex CLI commands in your shell.
+### Claude Code
 
-| Step                | Claude Code                                             | Codex CLI                                                    |
-| ------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
-| Add the marketplace | `/plugin marketplace add astral-sh/claude-code-plugins` | `codex plugin marketplace add astral-sh/claude-code-plugins` |
-| Install the plugin  | `/plugin install astral@astral-sh`                      | `codex plugin add astral@astral-sh`                          |
+In a Claude Code session, add the Astral marketplace.
 
-In Claude Code, you can also browse and install plugins with `/plugin`.
+```text
+/plugin marketplace add astral-sh/claude-code-plugins
+```
 
-### Team installation
+Then install the `astral` plugin, or browse the marketplace with `/plugin`.
 
-For Claude Code, add the marketplace and plugin to your project's
+```text
+/plugin install astral@astral-sh
+```
+
+For a team installation, add the marketplace and plugin to your project's
 `.claude/settings.json`.
 
 ```json
@@ -40,7 +42,16 @@ For Claude Code, add the marketplace and plugin to your project's
 Team members will be prompted to install the plugin when they trust the
 repository.
 
-For Codex, teams can configure the marketplace and plugin in their
+### Codex
+
+Run these commands in your shell to add the marketplace and install the plugin.
+
+```bash
+codex plugin marketplace add astral-sh/claude-code-plugins
+codex plugin add astral@astral-sh
+```
+
+Teams can configure the marketplace and plugin in their
 [managed configuration](https://developers.openai.com/codex/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults).
 
 ## Usage
