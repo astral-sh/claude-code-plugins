@@ -14,6 +14,15 @@ git clone https://github.com/astral-sh/agent-plugins
 From the directory containing the clone, add it as a local marketplace and
 install the plugin.
 
+### Codex
+
+Run these commands in your shell.
+
+```bash
+codex plugin marketplace add ./agent-plugins
+codex plugin add astral@astral-sh
+```
+
 ### Claude Code
 
 Run each command in a Claude Code session.
@@ -24,15 +33,6 @@ Run each command in a Claude Code session.
 
 ```text
 /plugin install astral@astral-sh
-```
-
-### Codex
-
-Run these commands in your shell.
-
-```bash
-codex plugin marketplace add ./agent-plugins
-codex plugin add astral@astral-sh
 ```
 
 ## Plugin manifests
