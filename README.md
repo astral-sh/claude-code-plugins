@@ -1,32 +1,25 @@
-# Astral plugins for Claude Code
+# Astral agent plugins
+
+The `astral` plugin provides coding agents with skills for managing Python
+projects with `uv`, linting and formatting with `ruff`, and type checking with
+`ty`. The same plugin works in Claude Code and Codex.
 
 ## Installation
 
-### Add the marketplace
+Add the `astral-sh` marketplace, then install the `astral` plugin. Run the
+Claude Code commands in a session and the Codex CLI commands in your shell.
 
-Add the Astral marketplace to Claude Code:
+| Step                | Claude Code                                             | Codex CLI                                                    |
+| ------------------- | ------------------------------------------------------- | ------------------------------------------------------------ |
+| Add the marketplace | `/plugin marketplace add astral-sh/claude-code-plugins` | `codex plugin marketplace add astral-sh/claude-code-plugins` |
+| Install the plugin  | `/plugin install astral@astral-sh`                      | `codex plugin add astral@astral-sh`                          |
 
-```bash
-/plugin marketplace add astral-sh/claude-code-plugins
-```
-
-### Install the `astral` plugin
-
-After adding the marketplace:
-
-```bash
-/plugin install astral@astral-sh
-```
-
-Or browse and install interactively:
-
-```bash
-/plugin
-```
+In Claude Code, you can also browse and install plugins with `/plugin`.
 
 ### Team installation
 
-For team-wide plugin usage, add to your project's `.claude/settings.json`:
+For Claude Code, add the marketplace and plugin to your project's
+`.claude/settings.json`.
 
 ```json
 {
@@ -47,23 +40,25 @@ For team-wide plugin usage, add to your project's `.claude/settings.json`:
 Team members will be prompted to install the plugin when they trust the
 repository.
 
+For Codex, teams can configure the marketplace and plugin in their
+[managed configuration](https://developers.openai.com/codex/enterprise/managed-configuration#configure-plugin-marketplaces-and-defaults).
+
 ## Usage
 
 ### Skills
 
-The plugin provides skills for Astral tools.
+To request a skill explicitly, use `/astral:uv` in Claude Code or `$astral:uv`
+in a Codex CLI prompt. Use `ruff` or `ty` in place of `uv` for the other skills.
 
-Invoke skills with `/astral:<skill>`, e.g., `/astral:uv`.
+You can also add this instruction to `CLAUDE.md` for Claude Code or `AGENTS.md`
+for Codex.
 
-Claude sometimes needs to be prompted to use skills. We recommend adding this
-instruction to your `CLAUDE.md`:
+> When working with Python, use the `uv`, `ruff`, or `ty` skill when relevant.
 
-> When working with Python, invoke the relevant `/astral:<skill>` for `uv`,
-> `ty`, and `ruff` to ensure best practices are followed.
+### Claude Code language server
 
-### LSP
-
-The plugin also provides the ty LSP. It requires `uvx` to be available.
+In Claude Code, the plugin also provides the `ty` language server. It requires
+`uvx` to be available.
 
 ## License
 
